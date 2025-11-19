@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ArasEditör.css">
+    <title>NoteBook</title>
+    <script src="ArasEditör.js"></script>
+</head>
+<body>
+    <div id="EminMisinBas" style="display: none;">
+        <div id="EminMisin">
+            <div id="EminMisinYazı"></div>
+            <a href=""><button onclick="Evet()">Evet</button></a>
+            <button onclick="EminMisinKapat()">Hayır</button>
+            <button onclick="NotuKaydetVeÇık()" id="KaydetVeÇık">Kaydet, Çık</button>
+        </div>
+    </div>
+    <div id="UstBar">
+        <ul id="Elementler">
+            <li><button class="Element" onclick="SayfayıYenile()" id="Element1"><div></div>Sayfayı Kapat</button></li>
+            <li><button class="Element" onclick="NotuSil()" id="Element2"><div></div>Sil</button></li>
+            <li><button class="Element" onclick="NotuKaydet()" id="Element3"><div></div>Kaydet</button></li>
+        </ul>
+    </div>
+    <div><textarea placeholder="Notum..."></textarea></div>
+</body>
+</html>

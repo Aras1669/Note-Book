@@ -8,6 +8,25 @@
     <script src="ArasEditör.js"></script>
 </head>
 <body>
+<script>
+    const YuklemeEkrani = document.createElement('div');
+    YuklemeEkrani.id = 'YuklemeEkrani';
+    YuklemeEkrani.innerHTML = `<div class="daire"></div>`;
+    document.body.appendChild(YuklemeEkrani);
+    const baslangicZamani = Date.now();
+    const minSure = 500;
+    window.addEventListener('load', () => {
+        const gizlePreloader = () => {
+            YuklemeEkrani.style.opacity = '0';
+            setTimeout(() => {
+                YuklemeEkrani.remove();
+            }, 250);
+        };
+
+        const gecikme = Math.max(minSure - (Date.now() - baslangicZamani), 0);
+        setTimeout(gecikme ? () => { setTimeout(gizlePreloader, 0); } : gizlePreloader, gecikme);
+    });
+</script>
     <div id="EminMisinBas" style="display: none;">
         <div id="EminMisin">
             <div id="EminMisinYazı"></div>

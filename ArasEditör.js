@@ -8,6 +8,7 @@ window.onload = function() {
 }
 
 
+
 function EminMisinKapat() {
     document.getElementById("EminMisinBas").style.display = "none";
 }
@@ -16,7 +17,7 @@ function NotuKaydet() {
         setTimeout(() => {
             const notIcerik = document.querySelector("textarea").value;
             localStorage.setItem("notum", notIcerik);
-    alert("✅ Not kaydedildi!");
+            alert("✅ Not kaydedildi!");
         }, 250);
 }
 
@@ -28,8 +29,8 @@ function NotuKaydetVeÇık() {
     if (Silmek_Çıkmak === 2) {
         window.close();
         setTimeout(() => {
-        alert("Tarayıcı Otomatik Çıkmayı Desteklemiyor.  Yazılarınız Kaydedildi.  Çıkabilirsiniz.");
-        window.location = ("http://127.0.0.1:5500/NoteBook/")
+            alert("Tarayıcı Otomatik Çıkmayı Desteklemiyor.  Yazılarınız Kaydedildi.  Çıkabilirsiniz.");
+            window.location = ("http://127.0.0.1:5500/NoteBook/")
         }, 250);
     }
 }
